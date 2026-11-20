@@ -24,11 +24,9 @@ public class Main {
         // Input dari user menggunakan Scanner
         Scanner input = new Scanner(System.in);
 
-        // Instansiasi object
         PengelolaJadwal pengelolaJadwal = new PengelolaJadwal();
         PengelolaTugas pengelolaTugas = new PengelolaTugas();
 
-        muatDataContoh(pengelolaJadwal, pengelolaTugas);
 
         System.out.println("=====================================");
         System.out.println("   JadwalKu - Jadwal & Pengingat Tugas");
@@ -229,21 +227,4 @@ public class Main {
                 return "Minggu";
         }
     }
-
-    // Data contoh agar program langsung menampilkan sesuatu saat dijalankan
-    private static void muatDataContoh(PengelolaJadwal pengelolaJadwal, PengelolaTugas pengelolaTugas) {
-        String hari = hariIni();
-        pengelolaJadwal.tambahJadwal("Pemrograman Berorientasi Objek", hari, "08:00", "10:30", "Lab R2", "Asisten Dosen PBO");
-        pengelolaJadwal.tambahJadwal("Basis Data", "Selasa", "13:00", "15:30", "B2", "Dosen Basis Data");
-
-        pengelolaTugas.tambahTugas("Pemrograman Berorientasi Objek", "Tugas 4 Program Awal", LocalDate.now().plusDays(1));
-        pengelolaTugas.tambahTugas("Basis Data", "Latihan CRUD PHP", LocalDate.now().plusDays(4));
-        pengelolaTugas.tambahTugas("Jaringan Komputer", "Laporan Router", LocalDate.now().minusDays(1));
-    }
 }
-
-
-
-
-    
-
